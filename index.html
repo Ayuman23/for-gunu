@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Gunu 🖤</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- BACKGROUND EFFECTS -->
+<div class="glow"></div>
+<div class="hearts"></div>
+
+<body>
+
+<!-- BACKGROUND EFFECTS -->
+<div class="glow"></div>
+<div class="hearts"></div>
+
+<!-- LOGIN PAGE -->
+<div id="loginPage" class="center">
+  <h1>🖤 Private Memories 🖤</h1>
+  <p>Enter your name to unlock</p>
+  <input type="text" id="nameInput" placeholder="Your name" autocomplete="off">
+  <button onclick="checkName()">Unlock</button>
+</div>
+
+<!-- MEMORY PAGE -->
+<div id="memoryPage" class="hidden">
+  <h1>6 Months of Us 🖤</h1>
+
+  <div class="gallery">
+
+    <div class="photo-card" onclick="revealPhoto(this)">
+      <div class="photo-cover">💜 Tap to reveal</div>
+      <img src="images/pic1.jpeg">
+    </div>
+
+    <div class="photo-card" onclick="revealPhoto(this)">
+      <div class="photo-cover">💜 Tap to reveal</div>
+      <img src="images/pic2.jpeg">
+    </div>
+
+    <div class="photo-card" onclick="revealPhoto(this)">
+      <div class="photo-cover">💜 Tap to reveal</div>
+      <img src="images/pic3.jpeg">
+    </div>
+
+    <div class="photo-card" onclick="revealPhoto(this)">
+      <div class="photo-cover">💜 Tap to reveal</div>
+      <img src="images/pic4.jpeg">
+    </div>
+
+  </div>
+
+  <button class="letterBtn" onclick="openLetter()">💌 Read Letter</button>
+</div>
+
+<!-- LETTER POPUP -->
+<div id="letterPopup" class="popup hidden">
+  <div class="popupContent">
+    <h2>Dear Gunu 🖤</h2>
+    <p>
+      These months with you have been the calmest, happiest part of my life✨.<br><br>
+      Every picture here holds a moment I never want to forget😌.
+      You loved me even when I was at my lowest🤗.<br><br>
+      My love, there is so much to say and still not enough.
+      In the future we may have small fights,
+      some days we may be busy,
+      but the love for each other will always be there 😊<br><br>
+      This website is small, but my love for you isn’t😉.
+      I hope it brings a smile to your face.<br><br>
+      There are some photos of us 😁<br>
+      <strong>I LOVE YOU GUNU 💕</strong>
+    </p>
+    <p class="sign">— Yours, Ayu 🖤</p>
+    <button onclick="closeLetter()">Close</button>
+  </div>
+</div>
+
+<!-- BACKGROUND MUSIC -->
+<audio id="bgMusic" src="music/bg.mp3" loop></audio>
+
+<!-- JAVASCRIPT -->
+<script src="script.js"></script>
+
+</body>
+</html>
