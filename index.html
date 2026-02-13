@@ -253,11 +253,15 @@ button {
 </div>
 
 <audio id="bgMusic" src="music/bg.mp3" loop></audio>
-
+  
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+
+  // FORCE INITIAL STATE
+  document.getElementById("loginPage").style.display = "flex";
   document.getElementById("memoryPage").classList.add("hidden");
   document.getElementById("letterPopup").classList.add("hidden");
+
 });
 
 function checkName() {
@@ -267,9 +271,11 @@ function checkName() {
   if (input.toLowerCase() === correctName.toLowerCase()) {
     document.getElementById("loginPage").style.display = "none";
     document.getElementById("memoryPage").classList.remove("hidden");
+
     const music = document.getElementById("bgMusic");
     music.volume = 0.35;
     music.play();
+
   } else {
     alert("Nice try 😏");
   }
@@ -288,5 +294,8 @@ function revealPhoto(card) {
 }
 </script>
 
+
+
 </body>
 </html>
+
