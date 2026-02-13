@@ -8,9 +8,6 @@
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
-<!-- BACKGROUND EFFECTS -->
-<div class="glow"></div>
-<div class="hearts"></div>
 
 <body>
 
@@ -83,7 +80,53 @@
 <audio id="bgMusic" src="music/bg.mp3" loop></audio>
 
 <!-- JAVASCRIPT -->
-<script src="script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("memoryPage").classList.add("hidden");
+  document.getElementById("letterPopup").classList.add("hidden");
+});
+
+
+window.onload = function () {
+  document.getElementById("letterPopup").classList.add("hidden");
+  document.getElementById("memoryPage").classList.add("hidden");
+};
+
+function checkName() {
+  const correctName = "Vedu Baii";
+  const input = document.getElementById("nameInput").value.trim();
+
+  const funnyMessages = [
+    "Nice try 😏",
+    "This space is reserved 🖤",
+    "Wrong name 🤭",
+    "Access denied 😂"
+  ];
+
+  if (input.toLowerCase() === correctName.toLowerCase()) {
+    document.getElementById("loginPage").style.display = "none";
+    document.getElementById("memoryPage").classList.remove("hidden");
+    document.getElementById("bgMusic").volume = 0.35;
+  document.getElementById("bgMusic").play();
+
+  } else {
+    alert(funnyMessages[Math.floor(Math.random() * funnyMessages.length)]);
+  }
+}
+
+function openLetter() {
+  document.getElementById("letterPopup").classList.remove("hidden");
+}
+
+function closeLetter() {
+  document.getElementById("letterPopup").classList.add("hidden");
+}
+function revealPhoto(card) {
+  card.classList.add("revealed");
+}
+
+
+</script>
 
 </body>
 </html>
